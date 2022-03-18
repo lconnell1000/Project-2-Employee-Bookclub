@@ -23,6 +23,8 @@ BookReview.init(
     },
     review_date: {
         type: DataTypes.DATE,
+        allowNull: false,
+        defaultValue: Datatypes.NOW,
     },
   },
   {
