@@ -2,6 +2,7 @@ const User = require('./User');
 const Book = require('./Book');
 const BookReview = require('./BookReview')
 const BookCover = require('./BookCover')
+const Genre = require('./Genre')
 
 User.hasMany(Book, {
   foreignKey: 'user_id',
@@ -32,4 +33,4 @@ BookCover.belongsTo(Book, {
 
 
 
-module.exports = { User, Project };
+module.exports = { User, Book, BookReview, BookCover, Genre };
