@@ -20,7 +20,7 @@ Book.init(
       allowNull: false,
     },
     Genre: {
-      type: Datatypes.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     user_id: {

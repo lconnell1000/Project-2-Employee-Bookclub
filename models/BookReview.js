@@ -19,12 +19,12 @@ BookReview.init(
         },
     },
     star_rating: {
-        type: Datatypes.DECIMAL,
+        type: DataTypes.DECIMAL,
     },
     review_date: {
         type: DataTypes.DATE,
         allowNull: false,
-        defaultValue: Datatypes.NOW,
+        defaultValue: DataTypes.NOW,
     },
   },
   {
