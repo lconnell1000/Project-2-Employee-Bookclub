@@ -16,7 +16,10 @@ BookCover.init(
         references: {
           model: 'book',
           key: 'id',
-        },
+        }, 
+    },
+    file_name: {
+        type: DataTypes.STRING,
     },
   },
   {
