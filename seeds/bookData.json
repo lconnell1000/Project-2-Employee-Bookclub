@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "genre": "Science Fiction",
+    "user_id":1
+  },
+  {
+    "title": "The Girl With The Dragon Tattoo",
+    "author": "Stieg Larsson",
+    "genre": "Crime",
+    "user_id":2
+  },
+  {
+    "title": "A Game of Thrones",
+    "author": "George R. R. Martin",
+    "genre": "Fantasy",
+    "user_id":3
+  }
+]

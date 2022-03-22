@@ -20,16 +20,16 @@ Book.belongsTo(User, {
 
 BookReview.belongsTo(User, {
   foreignKey: 'user_id'
-})
+});
 
 Book.hasOne(BookCover, {
   foreignKey: 'book_id',
   onDelete: 'CASCADE'
-})
+});
 
 BookCover.belongsTo(Book, {
   foreignKey: 'book_id'
-})
+});
 
 
 
