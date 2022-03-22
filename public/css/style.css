@@ -7,8 +7,14 @@
   --white: #ffffff;
   --black: #000000;
 }
-
+body {
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 200;
+}
+a:hover{
+  color: var(--white);
   text-decoration: none;
+}
 }
 h1,h2,h3,h4,h5 {
   font-family: 'Londrina Solid', cursive;
