@@ -4,6 +4,7 @@ const BookReview = require('./BookReview')
 const BookCover = require('./BookCover')
 const Genre = require('./Genre')
 
+//create associations
 User.hasMany(Book, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
@@ -13,6 +14,10 @@ User.hasMany(BookReview, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
 });
+Book.hasMany(BookReview, {
+  foreignkey: 'book_id' ,
+  onDelete: 'CASCADE'
+});
 
 Book.belongsTo(User, {
   foreignKey: 'user_id'
@@ -20,6 +25,10 @@ Book.belongsTo(User, {
 
 BookReview.belongsTo(User, {
   foreignKey: 'user_id'
+});
+
+BookReview.belongsTo(Book, {
+  foreignKey: 'book_id'
 });
 
 Book.hasOne(BookCover, {
