@@ -1,24 +1,84 @@
-header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+:root {
+  --yellow: #ffbc03;
+  --ruby: #85102f;
+  --orange: #e2451f;
+  --wine: #f0d99c;
+  --pink: #dd696d;
+  --white: #ffffff;
+  --black: #000000;
 }
-
-.no-button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  color: #1b89bc;
+body {
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 200;
+}
+a:hover{
+  color: var(--white);
   text-decoration: none;
-  font-size: 100%;
+}
+}
+h1,h2,h3,h4,h5 {
+  font-family: 'Londrina Solid', cursive;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
-.no-button:hover {
-  color: #065b83;
+/* header section */
+.navbar {
+  background-color:var(--yellow);
+  border-bottom: 2px solid var(--ruby);
+}
+h1 {
+  font-size: 150px;
+  color:var(--orange);
+}
+/*navigation */
+.navbar-nav {
+  flex-direction: row;
+}
+.navbar-nav a {
+  color:var(--orange);
+  font-size: 24px;
+}
+.navbar-nav :hover {
   text-decoration: underline;
+  color:var(--ruby);
+}
+.navbar-nav li {
+  padding-left:20px;
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
+
+/* book entries */
+.books {
+  background-color:var(--yellow);
+  padding: 30px 60px 60px;
+}
+.books h2 {
+  font-size: 100px;
+  color:var(--pink);
+  padding-bottom: 30px;
+}
+.card {
+  border: none;
+  background-color:transparent;
+}
+.card h5 {
+  color:var(--ruby);
+}
+.card p {
+  color:var(--ruby);
+}
+.btn {
+  background-color: var(--orange);
+  color: var(--white);
+  margin-left:auto;
+  margin-right: auto;
+}
+.stars {
+  color: var(--ruby);
+  padding-left:30px;
+  float:right;
+  font-size: 20px;
+  position: relative;
+  top: 4px;
 }
