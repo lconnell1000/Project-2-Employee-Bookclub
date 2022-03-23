@@ -16,17 +16,13 @@ Book.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    Author: {
+    author: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    genre_name: {
+    genre: {
       type: DataTypes.STRING,
       allowNull: false,
-      references: {
-        model: 'genre',
-        key: 'name',
-      }
     },
     file_name: {
       type: DataTypes.STRING,
