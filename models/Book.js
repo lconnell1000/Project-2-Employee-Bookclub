@@ -1,4 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
+const { Genre } = require('.');
 const sequelize = require('../config/connection');
 
 class Book extends Model {}
@@ -19,10 +20,17 @@ Book.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    Genre: {
+    genre_name: {
       type: DataTypes.STRING,
       allowNull: false,
+      references: {
+        model: 'genre',
+        key: 'name',
+      }
     },
+    file_name: {
+      type: DataTypes.STRING,
+  },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
