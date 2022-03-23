@@ -18,9 +18,9 @@ router.get('/', async (req, res) => {
     const books = bookData.map((book) => book.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('homepage', { 
-      books, 
-      logged_in: req.session.logged_in 
+    res.render('homepage', {
+      books,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
@@ -49,6 +49,8 @@ router.get('/book/:id', async (req, res) => {
   }
 });
 
+
+
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
   try {
@@ -75,6 +77,8 @@ router.get('/login', (req, res) => {
     res.redirect('/profile');
     return;
   }
+
+
 
   res.render('login');
 });
