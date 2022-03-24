@@ -12,12 +12,10 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  for (const book of bookData) {
-    await Book.create({
-      ...book,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
-    });
-  }
+  const books = await Book.bulkCreate(bookData, {
+    individualHooks: true,
+    returning: true,
+  });
 
   process.exit(0);
 };

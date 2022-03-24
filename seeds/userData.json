@@ -8,13 +8,13 @@
   {
     "first_name": "Lachlan",
     "last_name": "The Con",
-    "email": "Lachlan@thecon.com",
+    "email": "lachlan@thecon.com",
     "password": "password12345"
   },
   {
     "first_name": "Clayton",
     "last_name": "The Mac",
-    "email": "the@themac.com",
+    "email": "clayton@themac.com",
     "password": "password12345"
   }
 ]

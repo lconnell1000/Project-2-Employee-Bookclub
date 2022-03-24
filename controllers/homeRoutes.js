@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['title'],
+          attributes: ['first_name', 'last_name', 'email', 'password'],
         },
       ],
     });
@@ -18,9 +18,9 @@ router.get('/', async (req, res) => {
     const books = bookData.map((book) => book.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('homepage', { 
-      books, 
-      logged_in: req.session.logged_in 
+    res.render('homepage', {
+      books,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
@@ -32,7 +32,7 @@ router.get('/book/:id', async (req, res) => {
     const bookData = await Book.findByPk(req.params.id, {
       include: [
         {
-          model: User,
+          model: Book,
           attributes: ['title'],
         },
       ],
@@ -48,6 +48,8 @@ router.get('/book/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
 
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
@@ -69,12 +71,21 @@ router.get('/profile', withAuth, async (req, res) => {
   }
 });
 
+router.get('/books', (req, res) => {
+  if (req.session.logged_in) {
+    res.render('book');
+    return;
+  }
+})
+
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
     res.redirect('/profile');
     return;
   }
+
+
 
   res.render('login');
 });
