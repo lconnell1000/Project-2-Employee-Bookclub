@@ -87,6 +87,9 @@ h1 {
   border: none;
   background-color:transparent;
 }
+.card h4 {
+  color:var(--ruby);
+}
 .card h5 {
   color:var(--ruby);
 }
