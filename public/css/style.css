@@ -125,6 +125,10 @@ h1 {
   color:var(--white);
 }
 /* login page */
+.login-page {
+  background-color:var(--wine);
+  padding: 30px 60px 60px;
+}
 /* style form inputs */
 .form-input {
   width: 90%;
