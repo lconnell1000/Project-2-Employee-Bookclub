@@ -13,7 +13,7 @@ User.hasMany(BookReview, {
   onDelete: 'CASCADE'
 });
 Book.hasMany(BookReview, {
-  foreignkey: 'book_id' ,
+  foreignkey: 'book_id',
   onDelete: 'CASCADE'
 });
 
@@ -30,4 +30,4 @@ BookReview.belongsTo(Book, {
 });
 
 
-module.exports = { User, Book, BookReview};
+module.exports = { User, Book, BookReview };
