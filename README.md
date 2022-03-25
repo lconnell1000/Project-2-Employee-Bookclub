@@ -4,7 +4,7 @@ Text
 
 ## Team members
 
-[Lachlan](https://github.com/lconnell1000)
+[Lachlan](https://github.com/lconnell1000);
 [Dave](https://github.com/SEO-Web)
 [Clayton](https://github.com/ClaytonMcIntosh)
 
@@ -29,6 +29,15 @@ THEN I
 
 [Novel Shelf on Heroku](https://)
 
-## Screenshots
+## Development
 
 ![ScreenShot](./public/img/screenshot1.png)
+
+## Development
+
+
+## Packages
+
+Use at least one new library, package, or technology that we haven’t discussed.
+
+
