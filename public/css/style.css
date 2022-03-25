@@ -154,7 +154,7 @@ button, input, optgroup, select, textarea {
 
 
 @media (max-width:1210px) {
-  .navbar-header h1 {
+  .navbar-brand {
     font-size: 110px;
   }
   .navbar-nav a {
@@ -170,7 +170,7 @@ button, input, optgroup, select, textarea {
 
 
 @media (max-width:1008px) {
-  .navbar-header h1 {
+  .navbar-brand  {
     font-size: 90px;
   }
   .navbar-nav a {
@@ -182,6 +182,88 @@ button, input, optgroup, select, textarea {
 }
 
 @media (max-width:1008px) {
+  .navbar-brand {
+    font-size: 70px;
+}
+.navbar-header h1 {
+    font-size: 70px;
+}
+
+.navbar-nav {
+    display: block;
+}
+.btn-login {
+    margin-left: 14px;
+}
+.menu_bar span {
+        display: block;
+        width: 40px;
+        height: 2px;
+        transition: 200ms;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        transition: all 0.5s;
+        background-color: var(--orange);
+        position: relative;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        margin-top: 0;
+        margin-left: 0;
+        border-radius: 100px;
+    }
+    .menu_bar.not-openmenu span:nth-child(1) {
+        top: 0;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    .menu_bar.not-active span:nth-child(2) {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    .menu_bar.not-active span:nth-child(3) {
+        bottom: 0;
+        transform: rotate(0);
+    }
+    .menu_bar.closemenu span:nth-child(1) {
+        top: 9px;
+        -webkit-transform: rotate(135deg);
+        transform: rotate(126deg);
+    }
+    .menu_bar.closemenu span:nth-child(2) {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    .menu_bar.closemenu span:nth-child(3) {
+        bottom: 15px;
+        transform: rotate(-130deg);
+    }
+    .menu_bar span + span {
+        margin-top: 10px;
+    }
+    a.menu_bar {
+        margin-left: 15px;
+        margin-top: -2px;
+    }
+    .navbar-toggler-icon {
+        width: 40px;
+        margin-top: 0;
+    }
+    .navbar-toggler {
+    border: 0;
+}
+.navbar>.container, .navbar>.container-fluid {
+    display: block;}
+    .navbar-toggler:focus, .navbar-toggler:hover {
+    outline: 0;
+}
+.navbar {
+    padding: 0;
+}
+
   .navbar-header h1 {
     font-size: 70px;
   }
@@ -198,3 +280,8 @@ button, input, optgroup, select, textarea {
 
   }*/
 }
+/* small screens */
+@media (max-width:767px) {
+
+  }
+  
