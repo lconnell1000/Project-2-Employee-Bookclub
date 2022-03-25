@@ -143,3 +143,44 @@ button, input, optgroup, select, textarea {
   font-size: inherit;
   line-height: inherit;
 }
+
+
+@media (max-width:1210px) {
+  h1 {
+    font-size: 110px;
+  }
+  .navbar-nav a {
+    font-size: 18px;
+  }
+  .navbar-nav li {
+    padding-left:14px;
+  }
+  .navbar-log li {
+    font-size: 18px;
+  }
+}
+
+
+@media (max-width:1008px) {
+  h1 {
+    font-size: 90px;
+  }
+  .navbar-nav a {
+    font-size: 14px;
+  }
+  .navbar-log li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width:1008px) {
+  h1 {
+    font-size: 70px;
+  }
+  .navbar-nav a {
+    font-size: 14px;
+  }
+  .navbar-log li {
+    font-size: 14px;
+  }
+}
