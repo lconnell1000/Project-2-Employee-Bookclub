@@ -4,6 +4,7 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
+const multer = require('multer');
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -26,9 +27,7 @@ const sess = {
 
 app.use(session(sess));
 
-//START CLAY TEST
-
-const multer = require('multer');
+//code for multer image uploads
 
 const fileStorageEngine = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -43,15 +42,8 @@ const upload = multer({ storage: fileStorageEngine })
 
 app.post("/single", upload.single("image"), (req, res) => {
   console.log(req.file);
-  res.send("Single file upload success");
+  res.render('review');
 });
-
-//END CLAY TEST
-
-
-
-
-
 
 // Inform Express.js on which template engine to use
 app.engine('handlebars', hbs.engine);

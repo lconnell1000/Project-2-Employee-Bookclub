@@ -28,26 +28,26 @@
       <textarea class="form-input" id="book-desc" name="book-desc"></textarea>
     </div>
 
-    <div>
-      <button type="submit" class="btn btn-primary">Create</button>
-    </div>
-
     <form action="/single" method="POST" enctype="multipart/form-data">
       <input type="file" name="image" />
-      <button typle="submit">Submit</button>
+      <button type="submit">Submit</button>
     </form>
 
 
 
+    <div>
+      <button type="submit" class="btn btn-primary">Create</button>
+    </div>
+
 
     {{#if books.length}}
     <div class="col-md-6 book-list">
-      <h3>My Books:</h3>
+      <h3>My Books!!:</h3>
 
       {{#each books as |book|}}
       <div class="row mb-2">
         <div class="col-md-8">
-          <h4><a href="/book/{{book.id}}">{{book.name}}</a></h4>
+          <h4><a href="/book/{{book.id}}">{{book.title}}</a></h4>
         </div>
         <div class="col-md-4">
           <button class="btn btn-sm btn-danger" data-id="{{book.id}}">DELETE</button>

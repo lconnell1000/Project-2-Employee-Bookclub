@@ -2,7 +2,6 @@ const router = require('express').Router();
 const { Book, User } = require('../models');
 const withAuth = require('../utils/auth');
 
-
 router.get('/', async (req, res) => {
   try {
     // Get all books and JOIN with user data
@@ -33,8 +32,8 @@ router.get('/book/:id', async (req, res) => {
     const bookData = await Book.findByPk(req.params.id, {
       include: [
         {
-          model: Book,
-          attributes: ['title'],
+          model: User,
+          attributes: ['first_name', 'last_name'],
         },
       ],
     });
