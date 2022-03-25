@@ -1,53 +1,32 @@
 <div class="row">
   <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
+    <h2>Welcome, {{first_name}}!</h2>
   </div>
 </div>
 
-<div class="row mt-4">
-  <div class="col-md-6">
-    <h3>Add a New Book:</h3>
+<a href="/books">Add a New Book</a>
 
-    <div class="form-group" action="/" enctype="multipart/form-data" method="post">
-      <label for="book-title">Book title:</label>
-      <input class="form-input" type="text" id="book-title" name="book-title" />
-    </div>
 
-    <div class="form-group">
-      <label for="book-author">Book author:</label>
-      <input class="form-input" type="text" id="book-author" name="book-author" />
-    </div>
-
-    <div class="form-group">
-      <label for="book-genre">Book genre:</label>
-      <textarea class="form-input" id="book-genre" name="book-genre"></textarea>
-    </div>
-
-    <div class="form-group">
-      <label for="book-desc">Description of book:</label>
-      <textarea class="form-input" id="book-desc" name="book-desc"></textarea>
-    </div>
-
-    <div>
-      <button type="submit" class="btn btn-primary">Create</button>
-    </div>
-
-    {{#if books.length}}
     <div class="col-md-6 book-list">
-      <h3>My Books:</h3>
+  
+  
+  {{#if books.length}}
+  <div class="col-md-6 book-list">
+    <h3>Current Projects:</h3>
 
-      {{#each books as |book|}}
-      <div class="row mb-2">
-        <div class="col-md-8">
-          <h4><a href="/book/{{book.id}}">{{book.name}}</a></h4>
-        </div>
-        <div class="col-md-4">
-          <button class="btn btn-sm btn-danger" data-id="{{book.id}}">DELETE</button>
-        </div>
+    {{#each books as |book|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/book/{{book.id}}">{{book.title}}</a></h4>
       </div>
-      {{/each}}
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{book.id}}">DELETE</button>
+      </div>
     </div>
-    {{/if}}
+    {{/each}}
   </div>
+  {{/if}}
+</div>
 
-  <script src="./js/profile.js"></script>
+
+ <script src="./js/profile.js"></script>
