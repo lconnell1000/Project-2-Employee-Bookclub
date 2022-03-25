@@ -2,11 +2,13 @@
 
 Text 
 
-## Team
+## Team members
 
-L
-D
-C
+[Lachlan](https://github.com/lconnell1000)
+[Dave](https://github.com/SEO-Web)
+[Clayton](https://github.com/ClaytonMcIntosh)
+
+## Elevator pitch
 
 ## User Story
 ```
@@ -27,6 +29,6 @@ THEN I
 
 [Novel Shelf on Heroku](https://)
 
-## ScreenshotsUse
+## Screenshots
 
-![ScreenShot](./public/img/screenshot.png)
+![ScreenShot](./public/img/screenshot1.png)
