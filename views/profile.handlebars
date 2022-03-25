@@ -9,22 +9,24 @@
 
     <div class="col-md-6 book-list">
   
-    {{#if books.length}}
-    <div class="col-md-6 book-list">
-      <h3>My Books!!:</h3>
+  
+  {{#if books.length}}
+  <div class="col-md-6 book-list">
+    <h3>Current Projects:</h3>
 
-      {{#each books as |book|}}
-      <div class="row mb-2">
-        <div class="col-md-8">
-          <h4><a href="/book/{{book.id}}">{{book.title}}</a></h4>
-        </div>
-        <div class="col-md-4">
-          <button class="btn btn-sm btn-danger" data-id="{{book.id}}">DELETE</button>
-        </div>
+    {{#each books as |book|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/book/{{book.id}}">{{book.title}}</a></h4>
       </div>
-      {{/each}}
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{book.id}}">DELETE</button>
+      </div>
     </div>
-    {{/if}}
+    {{/each}}
   </div>
+  {{/if}}
+</div>
 
- 
+
+ <script src="./js/profile.js"></script>
