@@ -1,14 +1,18 @@
 # Novel Space - A communal book shelf for your workplace
 
-Text 
+Novel Space is an application for the book lovers at your work place. Simply, it's a shared digital book shelf. Each book lover can place the books they own and recommend on the 'shelf' and others 
 
 ## Team members
 
-[Lachlan](https://github.com/lconnell1000);
+[Lachlan](https://github.com/lconnell1000)
+
 [Dave](https://github.com/SEO-Web)
+
 [Clayton](https://github.com/ClaytonMcIntosh)
 
 ## Elevator pitch
+
+
 
 ## User Story
 ```
@@ -31,13 +35,47 @@ THEN I
 
 ## Development
 
-![ScreenShot](./public/img/screenshot1.png)
 
-## Development
+## Tools
+
+[Figjam](https://www.figma.com/)
+
+[Unsplash](https://unsplash.com/photos/IOzk8YKDhYg)
+
+[Insomnia](https://insomnia.rest/)
+
+[Node.js](https://nodejs.org/en/)
+
+## Inspiration
+
+[Molly Dooker](https://mollydookerwines.com.au/shop-wines/)
 
 
 ## Packages
 
-Use at least one new library, package, or technology that we haven’t discussed.
+[Express](http://expressjs.com/)
+[Sequalize](https://sequelize.org/)
+[Bcrypt](https://www.npmjs.com/package/bcrypt)
+[Mysql](https://www.npmjs.com/package/mysql2)
+[Handlebars](https://handlebarsjs.com/)
 
 
+*Use at least one new library, package, or technology that we haven’t discussed.*
+
+
+Unable to get Formidale to work.
+
+[Formidable](https://www.npmjs.com/package/formidable)
+
+Switched to Multer
+
+[Multer](https://www.npmjs.com/package/multer)
+
+
+![ScreenShot](./public/img/screenshot1.png)
+![ScreenShot](./public/img/screenshot2.png)
+![ScreenShot](./public/img/screenshot3.png)
+![ScreenShot](./public/img/screenshot4.png)
+![ScreenShot](./public/img/screenshot5.png)
+![ScreenShot](./public/img/screenshot6.png)
+![ScreenShot](./public/img/screenshot7.png)
