@@ -1,5 +1,6 @@
 # Novel Space - A communal book shelf for your workplace
 
+Novel Space is an application for the book lovers at your work place. Simply, it's a shared digital book shelf. Each book lover can place the books they own and recommend on the 'shelf' and others 
 Novel Space is an application for the book lovers at your work place. Simply, it's a shared digital book shelf. Each book lover can place the books they own and recommend on the 'shelf' and others
 
 This application is different from [Goodreads](https://goodreads.com/) as it isn't a global
