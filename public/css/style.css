@@ -28,8 +28,15 @@ h1,h2,h3,h4,h5 {
   background-color:var(--yellow);
   border-bottom: 2px solid var(--ruby);
 }
-h1 {
-  font-size: 150px;
+.navbar-brand {
+  font-size: 130px;
+  color:var(--orange);
+  font-family: 'Londrina Solid', cursive;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.navbar-header h1 {
+  font-size: 130px;
   color:var(--orange);
 }
 /*navigation */
@@ -67,6 +74,7 @@ h1 {
   padding: 6px 12px;
   border-radius: 6px;
   margin-bottom: 10px;
+  margin-left:20px;
 }
 .btn-login a {
   color:var(--white);
@@ -146,7 +154,7 @@ button, input, optgroup, select, textarea {
 
 
 @media (max-width:1210px) {
-  h1 {
+  .navbar-header h1 {
     font-size: 110px;
   }
   .navbar-nav a {
@@ -162,7 +170,7 @@ button, input, optgroup, select, textarea {
 
 
 @media (max-width:1008px) {
-  h1 {
+  .navbar-header h1 {
     font-size: 90px;
   }
   .navbar-nav a {
@@ -174,7 +182,7 @@ button, input, optgroup, select, textarea {
 }
 
 @media (max-width:1008px) {
-  h1 {
+  .navbar-header h1 {
     font-size: 70px;
   }
   .navbar-nav a {
@@ -183,4 +191,10 @@ button, input, optgroup, select, textarea {
   .navbar-log li {
     font-size: 14px;
   }
+  /*.nav-desk {
+    display:none;
+  }
+  .nav-toggle {
+
+  }*/
 }
