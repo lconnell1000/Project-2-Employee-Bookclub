@@ -1,20 +1,26 @@
-<h3>Library:</h3>
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Add a New Book:</h3>
+    <form class="form new-book-form">
+    <div class="form-group">
+      <label for="book-title">Book title:</label>
+      <input class="form-input" type="text" id="book-title" name="book-title" />
+    </div>
+
+    <div class="form-group">
+      <label for="book-author">Book author:</label>
+      <input class="form-input" type="text" id="book-author" name="book-author" />
+    </div>
+
+    <div class="form-group">
+      <label for="book-genre">Book genre:</label>
+      <textarea class="form-input" id="book-genre" name="book-genre"></textarea>
+    </div>
+     <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+      </form>
+  </div>
 
 
-<!-- Loop over each object in the books array -->
-{{#each books as |book| }}
-<div>
-  <div>
-    <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      <a href="/book/{{book.id}}">{{book.title}}</a>
-    </h2>
-    <p>Created by {{book.user.name}} on {{format_date book.date_created}}</p>
-  </div>
-  <div class="col-md-7">
-    <p>
-      {{book.description}}
-    </p>
-  </div>
-</div>
-{{/each}}
+ <script src="./js/books.js"></script>
