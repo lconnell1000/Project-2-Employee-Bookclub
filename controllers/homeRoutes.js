@@ -76,8 +76,21 @@ router.get('/books', (req, res) => {
     res.render('book');
     return;
   }
-})
+});
 
+router.get('/cover', (req, res) => {
+  if (req.session.logged_in) {
+    res.render('cover');
+    return;
+  }
+});
+
+router.post('/single', (req, res) => {
+  if (req.session.logged_in) {
+    res.render('review');
+    return;
+  }
+});
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
