@@ -24,9 +24,9 @@ h1,h2,h3,h4,h5 {
 }
 
 /* header section */
+.navbar-fixed-top{ background-color:var(--yellow);}
 .navbar {
-  background-color:var(--yellow);
-  border-bottom: 2px solid var(--ruby);
+  border-bottom:1px solid var(--ruby);
 }
 .navbar-brand {
   font-size: 130px;
@@ -65,6 +65,9 @@ h1,h2,h3,h4,h5 {
 .navbar-log li {
   /*padding: 6px 12px;*/
   font-size: 24px;
+}
+.navbar {
+    padding: 0;
 }
 .btn-login {
   background-color: var(--orange);
@@ -182,7 +185,7 @@ button, input, optgroup, select, textarea {
 }
 
 @media (max-width:1008px) {
-  .navbar-brand {
+.navbar-brand {
     font-size: 70px;
 }
 .navbar-header h1 {
@@ -260,9 +263,6 @@ button, input, optgroup, select, textarea {
     .navbar-toggler:focus, .navbar-toggler:hover {
     outline: 0;
 }
-.navbar {
-    padding: 0;
-}
 
   .navbar-header h1 {
     font-size: 70px;
@@ -281,7 +281,14 @@ button, input, optgroup, select, textarea {
   }*/
 }
 /* small screens */
-@media (max-width:767px) {
-
+@media (max-width:500px) {
+.navbar-brand {
+    font-size: 40px;
+}
   }
-  
+ 
+ @media (max-width:359px) {
+.navbar-brand {
+    font-size: 30px;
+}
+  } 
