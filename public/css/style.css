@@ -171,6 +171,13 @@ button, input, optgroup, select, textarea {
   }
 }
 
+.box {
+  background-color: aqua;
+  border: 1px solid red;
+  padding: 10px;
+  margin: 10px;
+}
+
 
 @media (max-width:1008px) {
   .navbar-brand  {
