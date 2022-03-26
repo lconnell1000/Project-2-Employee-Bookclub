@@ -17,6 +17,9 @@ BookReview.init(
     },
     star_rating: {
         type: DataTypes.DECIMAL,
+        validate: {
+            max: [5],
+          },
     },
     review_date: {
         type: DataTypes.DATE,
