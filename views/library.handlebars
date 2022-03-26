@@ -1,0 +1,24 @@
+{{!-- {{#if books.length}}
+<div>
+    <h3>Books</h3> --}}
+
+    {{#each books as |book|}}
+    <div class="book-list">
+        <div class="box">
+            <p> id = <strong> {{book.id}} </strong></p>
+            <p> title = <strong> {{book.title}}</strong></p>
+            <p> author = <strong> {{book.author}}</strong></p>
+            <p> genre = <strong> {{book.genre}}</strong></p>
+            <p> file_name = <strong> {{book.file_name}}</strong></p>
+            <p> user_id = <strong> {{book.user_id}}</strong></p>
+            <button data-id="{{book.id}}">DELETE</button>
+        </div>
+    </div>
+</div>
+{{/each}}
+{{!-- </div>
+{{/if}} --}}
+
+
+
+<script src="./js/library.js"></script>
