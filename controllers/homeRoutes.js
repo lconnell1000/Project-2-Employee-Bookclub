@@ -42,7 +42,7 @@ router.get('/book/:id', async (req, res) => {
 
     const book = bookData.get({ plain: true });
 
-    res.render('book', {
+    res.render('addreview', {
       ...book,
       logged_in: req.session.logged_in
     });
