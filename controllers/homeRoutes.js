@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const { Book, User } = require('../models');
 const withAuth = require('../utils/auth');
+const multer = require('multer');
+
 
 router.get('/', async (req, res) => {
   try {
@@ -49,6 +51,22 @@ router.get('/book/:id', async (req, res) => {
   }
 });
 
+//code for multer image uploads
+
+const fileStorageEngine = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, './public/uploads')
+  },
+  filename: (req, file, cb) => {
+    cb(null, Date.now() + "--" + file.originalname);
+  }
+})
+
+const upload = multer({ storage: fileStorageEngine })
+router.post("/single", upload.single("image"), (req, res) => {
+  console.log(req.file);
+  res.render('review');
+});
 
 
 // Use withAuth middleware to prevent access to route
