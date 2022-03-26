@@ -1,32 +1,37 @@
-<div class="row">
-  <div class="col-auto">
-    <h2>Welcome, {{first_name}}!</h2>
-  </div>
-</div>
-
-<a href="/books">Add a New Book</a>
-
-
-    <div class="col-md-6 book-list">
-  
-  
-  {{#if books.length}}
-  <div class="col-md-6 book-list">
-    <h3>Current Projects:</h3>
-
-    {{#each books as |book|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/book/{{book.id}}">{{book.title}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{book.id}}">DELETE</button>
-      </div>
+<body>
+  <main>
+    <div class="profile">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2>Welcome, {{first_name}}!</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-8 book-list">
+            <h3>Your Books</h3>
+          </div>
+          <div class="col-sm-4">
+                <a class="btn btn-login" href="/books">Add a New Book</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 book-list">
+          {{#if books.length}}
+              
+            {{#each books as |book|}}
+            <h4><a href="/book/{{book.id}}">{{book.title}}</a></h4>
+            <img src="./img/book.png" alt="its a book"/>
+            <p>Well lets put in a book review</p>
+            <button class="btn btn-login" data-id="{{book.id}}">DELETE</button>
+            {{/each}}
+          </div>
+          {{/if}}
+        </div>         
+      </div>          
     </div>
-    {{/each}}
-  </div>
-  {{/if}}
-</div>
+  </main>
+</body>
 
 
  <script src="./js/profile.js"></script>
