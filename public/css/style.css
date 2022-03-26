@@ -22,6 +22,9 @@ h1,h2,h3,h4,h5 {
   text-transform: uppercase;
   padding: 30px 0 15px 0;
 }
+h2 {
+  font-size: 100px;
+}
 
 /* header section */
 .navbar-fixed-top{ background-color:var(--yellow);}
@@ -91,7 +94,6 @@ h1,h2,h3,h4,h5 {
   padding: 30px 60px 60px;
 }
 .books h2 {
-  font-size: 100px;
   color:var(--pink);
   padding-bottom: 30px;
 }
@@ -108,6 +110,9 @@ h1,h2,h3,h4,h5 {
 .card p {
   color:var(--ruby);
 }
+.card img {
+  width: 100%;
+}
 .btn {
   background-color: var(--orange);
   color: var(--white);
@@ -119,8 +124,7 @@ h1,h2,h3,h4,h5 {
   padding-left:30px;
   float:right;
   font-size: 16px;
-  position: relative;
-  bottom: 30px;
+  
 }
 /* new category */
 .books1 {
@@ -128,7 +132,6 @@ h1,h2,h3,h4,h5 {
   padding: 30px 60px 60px;
 }
 .books1 h2 {
-  font-size: 100px;
   color:var(--white);
   padding-bottom: 30px;
 }
@@ -155,6 +158,29 @@ button, input, optgroup, select, textarea {
   line-height: inherit;
 }
 
+/* Profile page */
+.profile {
+  background-color:var(--yellow);
+  padding: 30px 60px 60px;
+}
+.profile h2 {
+  color:var(--pink);
+  padding-bottom: 30px;
+}
+.book-list h3 {
+  padding-top: 0px;
+  color:var(--ruby);
+}
+.book-list h4 {
+  color:var(--ruby);
+}
+.book-list p {
+  color:var(--black);
+}
+.book-list a {
+  color:var(--black) !important;
+}
+
 
 @media (max-width:1210px) {
   .navbar-brand {
@@ -169,6 +195,9 @@ button, input, optgroup, select, textarea {
   .navbar-log li {
     font-size: 18px;
   }
+  h2 {
+    font-size: 80px;
+  }
 }
 
 
@@ -181,6 +210,9 @@ button, input, optgroup, select, textarea {
   }
   .navbar-log li {
     font-size: 14px;
+  }
+  h2 {
+    font-size: 60px;
   }
 }
 
@@ -273,6 +305,9 @@ button, input, optgroup, select, textarea {
   .navbar-log li {
     font-size: 14px;
   }
+  h2 {
+    font-size: 40px;
+  }
   /*.nav-desk {
     display:none;
   }
@@ -284,6 +319,9 @@ button, input, optgroup, select, textarea {
 @media (max-width:500px) {
 .navbar-brand {
     font-size: 40px;
+}
+h2 {
+  font-size: 30px;
 }
   }
  
