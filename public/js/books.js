@@ -15,7 +15,7 @@ const newFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/cover');
+      document.location.replace(`/cover?${title}`);
     } else {
       alert('Failed to create book');
     }
@@ -26,3 +26,4 @@ const newFormHandler = async (event) => {
 document
   .querySelector('.new-book-form')
   .addEventListener('submit', newFormHandler);
+
