@@ -14,6 +14,6 @@ const delButtonHandler = async (event) => {
 };
 
 document
-  .querySelector('.book-list')
+  .querySelector('#delete-card')
   .addEventListener('click', delButtonHandler);
 
