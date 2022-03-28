@@ -102,10 +102,7 @@ h2 {
   background-color:rgba(255,255,255,0.2);
   border-radius: 20px;
   padding:32px 16px 16px;
-<<<<<<< HEAD
   margin-bottom:20px;
-=======
->>>>>>> master
 }
 .card a {
   color:var(--ruby);
@@ -118,6 +115,8 @@ h2 {
 }
 .card p {
   color:var(--ruby);
+  line-height: 1.2;
+  margin-bottom:0.5rem;
 }
 .card img {
   width: 60%;
@@ -152,6 +151,7 @@ h2 {
 .login-page {
   background-color:var(--wine);
   padding: 30px 60px 60px;
+  height: 100vh;
 }
 /* style form inputs */
 .form-input {
@@ -172,6 +172,7 @@ button, input, optgroup, select, textarea {
 .profile {
   background-color:var(--yellow);
   padding: 30px 60px 60px;
+  height: 100vh;
 }
 .profile h2 {
   color:var(--pink);
