@@ -1,7 +1,11 @@
-<div class="row mt-4">
-  <div class="col-md-6">
+<main>
+<h1> Book ID: </h1><span id="book-id-change">#</span>
+
+<div id="id-get">{{id}}</div>
     <h3>Add a Review for this book:</h3>
 
+<div class="row mt-4">
+  <div class="col-md-6">
     <form class="form new-review-form">
       <div class="form-group">
         <label for="review-text">Your Thoughts About the Book:</label>
@@ -32,32 +36,6 @@
     </form>
   </div>
 </div>
-{{!-- <body>
-  <main>
-    <div class="books">
-      <div class="container">
-        <div class="row justify-content-md-center">
-          <div class="col-md-auto">
-            <h3>Add a Review for this book:</h3>
+</main>
 
-            <form class="form new-review-form">
-              <div class="form-group">
-                <label for="review-text">Your Thoughts About the Book:</label>
-                <textarea class="form-input" id="review-text" name="review-text"></textarea>
-              </div>
-              <div class="form-group">
-                <label for="star-rating">Your Star Rating Out of 5:</label>
-                <textarea class="form-input" id="star-rating" name="star-rating"></textarea>
-              </div>
-              <div class="form-group">
-                <button type="submit" class="btn btn-primary">Create Review</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-</body> --}}
-
-<script src="./js/review.js"></script>
+<script src="/js/review.js"></script>

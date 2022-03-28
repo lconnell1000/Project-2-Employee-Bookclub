@@ -53,20 +53,20 @@ router.get('/book/:id', async (req, res) => {
 
 //code for multer image uploads
 
-const fileStorageEngine = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, './public/uploads')
-  },
-  filename: (req, file, cb) => {
-    cb(null, Date.now() + "--" + file.originalname);
-  }
-})
+// const fileStorageEngine = multer.diskStorage({
+//   destination: (req, file, cb) => {
+//     cb(null, './public/uploads')
+//   },
+//   filename: (req, file, cb) => {
+//     cb(null, Date.now() + "--" + file.originalname);
+//   }
+// })
 
-const upload = multer({ storage: fileStorageEngine })
-router.post("/review", upload.single("image"), (req, res) => {
-  console.log(req.file);
-  res.render('review');
-});
+// const upload = multer({ storage: fileStorageEngine })
+// router.post("/review", upload.single("image"), (req, res) => {
+//   console.log(req.file);
+//   res.render('review');
+// });
 
 
 // Use withAuth middleware to prevent access to route
@@ -138,6 +138,7 @@ router.get('/review/:id', (req, res) => {
     return
   }
 });
+
 
 // router.post('/single', (req, res) => {
 //   if (req.session.logged_in) {
