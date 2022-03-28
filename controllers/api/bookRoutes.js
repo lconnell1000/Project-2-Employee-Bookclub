@@ -8,12 +8,15 @@ router.post('/', withAuth, async (req, res) => {
       ...req.body,
       user_id: req.session.user_id,
     });
-    console.log("newBook", newBook.dataValues.id);
-    res.status(200).json({"newbook": newBook});
+    res.status(200).json(newBook);
   } catch (err) {
     res.status(400).json(err);
   }
 });
+
+// router.get('/id', async (req, res => {
+
+// }))
 
 router.put("/:id", withAuth, async (req, res) => {
   try {

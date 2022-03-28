@@ -51,22 +51,22 @@ router.get('/book/:id', async (req, res) => {
   }
 });
 
-//code for multer image uploads
+// //code for multer image uploads
 
-const fileStorageEngine = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, './public/uploads')
-  },
-  filename: (req, file, cb) => {
-    cb(null, Date.now() + "--" + file.originalname);
-  }
-})
+// const fileStorageEngine = multer.diskStorage({
+//   destination: (req, file, cb) => {
+//     cb(null, './public/uploads')
+//   },
+//   filename: (req, file, cb) => {
+//     cb(null, Date.now() + "--" + file.originalname);
+//   }
+// })
 
-const upload = multer({ storage: fileStorageEngine })
-router.post("/single", upload.single("image"), (req, res) => {
-  console.log(req.file);
-  res.render('review');
-});
+// const upload = multer({ storage: fileStorageEngine })
+// router.post("/review", upload.single("image"), (req, res) => {
+//   console.log(req.file);
+//   res.render('review');
+// });
 
 
 // Use withAuth middleware to prevent access to route
@@ -116,19 +116,26 @@ router.get('/library', withAuth, async (req, res) => {
   }
 });
 
-router.get('/cover', (req, res) => {
+router.get('/cover/:id', (req, res) => {
   if (req.session.logged_in) {
     res.render('cover');
     return;
   }
 });
 
-router.post('/single', (req, res) => {
+router.get('/review/:id', (req, res) => {
   if (req.session.logged_in) {
     res.render('review');
-    return;
+    return
   }
 });
+
+// router.post('/single', (req, res) => {
+//   if (req.session.logged_in) {
+//     res.render('review');
+//     return;
+//   }
+// });
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
