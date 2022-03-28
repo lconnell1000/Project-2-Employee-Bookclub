@@ -23,9 +23,9 @@ Book.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    file_name: {
-      type: DataTypes.STRING,
-    },
+    // file_name: {
+    //   type: DataTypes.STRING,
+    // },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
