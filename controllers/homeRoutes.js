@@ -134,7 +134,9 @@ router.get('/cover', (req, res) => {
 
 router.get('/review/:id', (req, res) => {
   if (req.session.logged_in) {
-    res.render('review');
+    res.render('review', {
+    id: req.params.id
+  });
     return
   }
 });
