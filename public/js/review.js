@@ -3,12 +3,12 @@ const newFormHandler = async (event) => {
   
     const review_text = document.querySelector('#review-text').value.trim();
     const star_rating = document.querySelector('#star-rating').value.trim();
-    const book_id = document.querySelector('#id-get')
-  
+    const book_id = document.querySelector('#id-get').innerHTML;
+   
     if ( review_text && star_rating && book_id) {
       const response = await fetch(`/api/bookreview`, {
         method: 'POST',
-        body: JSON.stringify({ review_text, star_rating }),
+        body: JSON.stringify({ review_text, star_rating, book_id }),
         headers: {
           'Content-Type': 'application/json',
         },
@@ -23,6 +23,4 @@ const newFormHandler = async (event) => {
   };
   
   
-  document
-    .querySelector('.new-review-form')
-    .addEventListener('submit', newFormHandler);
+  document.querySelector('.new-review-form').addEventListener('submit', newFormHandler);
