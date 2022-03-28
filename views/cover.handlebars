@@ -1,9 +1,13 @@
-
 <h1> Book ID: </h1><span id="book-id-change">#</span>
 
+<div id="id-get">{{id}}</div>
+
+
+
+
 <h3>Upload a Cover for Your New Book!</h3>
-<form  class = 'form new-cover-form' action="/review" method="POST" enctype="multipart/form-data">
-  <input type="file" name="image" id="image"/>
+<form class='form new-cover-form' action="/review" method="POST" enctype="multipart/form-data">
+  <input type="file" name="image" id="image" />
   <button type="submit">Submit</button>
 </form>
 

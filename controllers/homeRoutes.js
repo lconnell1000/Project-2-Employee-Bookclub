@@ -118,6 +118,15 @@ router.get('/library', withAuth, async (req, res) => {
 
 router.get('/cover/:id', (req, res) => {
   if (req.session.logged_in) {
+    res.render('cover', {
+      id: req.params.id
+    });
+    return;
+  }
+});
+
+router.get('/cover', (req, res) => {
+  if (req.session.logged_in) {
     res.render('cover');
     return;
   }

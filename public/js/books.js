@@ -4,7 +4,7 @@ const newFormHandler = async (event) => {
   const title = document.querySelector('#book-title').value.trim();
   const author = document.querySelector('#book-author').value.trim();
   const genre = document.querySelector('#book-genre').value.trim()
- // alert("title: ", title);
+  // alert("title: ", title);
   if (title && author && genre) {
     const response = await fetch(`/api/book`, {
       method: 'POST',
@@ -15,7 +15,7 @@ const newFormHandler = async (event) => {
     });
     if (response.ok) {
       let body = await response.json();
-      document.location.replace(`/cover/${body.id}`);
+      document.location.replace(`/cover/?id=${body.id}`);
     } else {
       alert('Failed to create book');
     }
