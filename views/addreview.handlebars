@@ -1,14 +1,18 @@
 <div class="profile">
   <div class="container">
-    <div class="row">
-      <div class="col">
+    <div class="row justify-content-md-center">
+      <div class="col-md-auto">
+        <h3>Checkout the reviews</h3>
 
-        <p> first name: [ {{first_name}} ]</p>
-
-        <p>Book id: [ {{book.id}} ] Book title [ {{book.title}} ]</p>
 
         <p>
-          <button class="btn btn-login">OK</button>
+          <a button class="btn btn-login" href="/profile">Return to your profile</a>
+        </p>
+        <h3>Add your review</h3>
+        <p>first name:  {{first_name}} {{user_id}} </p>
+        <p>Book id:  {{book.id}}  Book title: {{book.title}} </p>
+        <p>
+          <button class="btn btn-login">Submit</button>
         </p>
       </div>
     </div>

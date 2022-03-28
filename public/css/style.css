@@ -83,8 +83,15 @@ h2 {
   margin-left:20px;
 }
 .btn-login a {
-  color:var(--white);
+  color:var(--white) !important;
   text-decoration: none;
+}
+.nav-btn {
+  position: relative;
+  top: 7px;
+}
+li.nav-btn a {
+  color:var(--white)!important;
 }
 
 
@@ -167,12 +174,21 @@ button, input, optgroup, select, textarea {
   font-size: inherit;
   line-height: inherit;
 }
-
+/* Add Books */
+.add-books {
+  background-color:var(--yellow);
+  padding: 30px 60px 60px;
+  height: 100vh;
+}
+/* height for text input area */
+.text-box {
+  height: 250px;
+}
 /* Profile page */
 .profile {
   background-color:var(--yellow);
   padding: 30px 60px 60px;
-  height: 100vh;
+  height: 100%;
 }
 .profile h2 {
   color:var(--pink);
