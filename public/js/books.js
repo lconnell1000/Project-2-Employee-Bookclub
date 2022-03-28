@@ -3,8 +3,8 @@ const newFormHandler = async (event) => {
 
   const title = document.querySelector('#book-title').value.trim();
   const author = document.querySelector('#book-author').value.trim();
-  const genre = document.querySelector('#book-genre').value.trim();
-
+  const genre = document.querySelector('#book-genre').value.trim()
+  alert("title: ", title);
   if (title && author && genre) {
     const response = await fetch(`/api/book`, {
       method: 'POST',
@@ -13,17 +13,16 @@ const newFormHandler = async (event) => {
         'Content-Type': 'application/json',
       },
     });
-
     if (response.ok) {
+      alert("ID ? :");
       document.location.replace(`/cover?${title}`);
     } else {
+      console.log("Response: " + response);
       alert('Failed to create book');
     }
   }
 };
 
 
-document
-  .querySelector('.new-book-form')
-  .addEventListener('submit', newFormHandler);
+document.querySelector('.new-book-form').addEventListener('submit', newFormHandler);
 
