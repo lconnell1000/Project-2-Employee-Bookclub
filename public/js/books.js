@@ -15,7 +15,7 @@ const newFormHandler = async (event) => {
     });
     if (response.ok) {
       let body = await response.json();
-      document.location.replace(`/cover/?id=${body.id}`);
+      document.location.replace(`/review/${body.id}`);
     } else {
       alert('Failed to create book');
     }
