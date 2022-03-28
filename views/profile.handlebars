@@ -23,10 +23,10 @@
               <div class="card-body">
                 <h4><a href="/book/{{book.id}}">{{book.title}}</a></h4>
                 <h5 class="card-author"> {{book.author}}</h5>
-                <p class="card-text"> genre = <strong> {{book.genre}}</strong></p>
-                <p class="card-text"> file_name = <strong> {{book.file_name}}</strong></p>
-                <p class="card-text"> user_id = <strong> {{book.user_id}}</strong></p>
-                <p> id = {{book.id}} </p>
+                <p class="card-text"> Genre = <strong> {{book.genre}}</strong></p>
+                {{!-- <p class="card-text"> file_name = <strong> {{book.file_name}}</strong></p> --}}
+                <p class="card-text"> User_id = <strong> {{book.user_id}}</strong></p>
+                <p> Book id = {{book.id}} </p>
                 <button class="btn" data-id="{{book.id}}">DELETE</button>
                 <span class="stars"><i class="fas fa-star"></i> <i class="fas fa-star"></i><i class="fas fa-star"></i><i
                     class="fas fa-star"></i></span>
