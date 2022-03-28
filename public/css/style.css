@@ -23,7 +23,7 @@ h1,h2,h3,h4,h5 {
   padding: 30px 0 15px 0;
 }
 h2 {
-  font-size: 100px;
+  font-size: 70px;
 }
 
 /* header section */
@@ -91,15 +91,20 @@ h2 {
 /* book entries */
 .books {
   background-color:var(--yellow);
-  padding: 30px 60px 60px;
+  padding: 30px 0px 60px;
 }
 .books h2 {
   color:var(--pink);
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 .card {
-  border: none;
-  background-color:transparent;
+  border: 1 px solid var(--white);
+  background-color:rgba(255,255,255,0.2);
+  border-radius: 20px;
+  padding:32px 16px 16px;
+}
+.card a {
+  color:var(--ruby);
 }
 .card h4 {
   color:var(--ruby);
@@ -111,7 +116,9 @@ h2 {
   color:var(--ruby);
 }
 .card img {
-  width: 100%;
+  width: 60%;
+  margin-left:auto;
+  margin-right:auto;
 }
 .btn {
   background-color: var(--orange);
@@ -124,7 +131,6 @@ h2 {
   padding-left:30px;
   float:right;
   font-size: 16px;
-  
 }
 /* new category */
 .books1 {
@@ -133,7 +139,7 @@ h2 {
 }
 .books1 h2 {
   color:var(--white);
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 .books1 .card p {
   color:var(--white);
@@ -159,16 +165,13 @@ button, input, optgroup, select, textarea {
 }
 
 /* Profile page */
-.border  {
-  border: 5px solid black;
-}
 .profile {
   background-color:var(--yellow);
   padding: 30px 60px 60px;
 }
 .profile h2 {
   color:var(--pink);
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 .book-list h3 {
   padding-top: 0px;
@@ -201,14 +204,6 @@ button, input, optgroup, select, textarea {
   h2 {
     font-size: 80px;
   }
-}
-
-.box {
-  background-color: aqua;
-  border: 1px solid red;
-  padding: 10px;
-  margin: 10px;
-  width: 500px;
 }
 
 
@@ -323,7 +318,6 @@ button, input, optgroup, select, textarea {
     display:none;
   }
   .nav-toggle {
-
   }*/
 }
 /* small screens */
