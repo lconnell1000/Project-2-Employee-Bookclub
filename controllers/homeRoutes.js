@@ -36,13 +36,16 @@ router.get('/book/:id', withAuth, async (req, res) => {
   try {
     
     const bookreviewData = await BookReview.findAll({
-      where: {id: req.params.id},
+     
       include: [
         {
-          model: User, 
+          model: Book, 
+          where: {id: req.params.id},
         },
         {
-          model: Book,
+          model: User,
+         // where: {id: BookReview.id},
+         
         }
       ],
     });

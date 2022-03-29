@@ -1,17 +1,20 @@
 [
   {
+    "id" : 1,
     "first_name": "Dave",
     "last_name": "The Man",
     "email": "dave@theman.com",
     "password": "password12345"
   },
   {
+    "id" : 2,
     "first_name": "Lachlan",
     "last_name": "The Con",
     "email": "lachlan@thecon.com",
     "password": "password12345"
   },
   {
+    "id" : 3,
     "first_name": "Clayton",
     "last_name": "The Mac",
     "email": "clayton@themac.com",
