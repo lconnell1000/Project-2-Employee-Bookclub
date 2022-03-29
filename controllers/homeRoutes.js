@@ -37,10 +37,10 @@ router.get('/book/id', withAuth, async (req, res) => {
       include: [{ model: BookReview }],
     });
 
-    const bookreview = bookreviewData.get({ plain: true });
+    const bookreviews = bookreviewData.map((bookreview) => bookreview.get({ plain: true }));
 
     res.render('addreview', {
-      ...BookReview,
+      ...bookreviews,
       logged_in: true
     });
   } catch (err) {
