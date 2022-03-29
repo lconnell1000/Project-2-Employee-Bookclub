@@ -16,6 +16,8 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+
+  
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const bookReviewData = await BookReview.destroy({
