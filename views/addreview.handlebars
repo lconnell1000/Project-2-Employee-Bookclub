@@ -1,20 +1,55 @@
-<div class="profile">
+{{!-- <div class="profile">
   <div class="container">
     <div class="row justify-content-md-center">
       <div class="col-md-auto">
         <h3>Checkout the reviews</h3>
-
+         {{#each bookreviews as |bookreview|}}
+          <div class="col-md-4">
+            <div class="card">
+              <img src="./img/book.jpg" class="card-img-top" alt="book">
+              <div class="card-body">
+                <h4><a href="/book/{{book.id}}">{{book.title}}</a></h4>
+                <h5 class="card-author">-- {{book.author}}</h5>
+                <p class="card-text"> genre = <strong> {{book.genre}}</strong></p>
 
         <p>
           <a button class="btn btn-login" href="/profile">Return to your profile</a>
         </p>
         <h3>Add your review</h3>
-        <p>first name:  {{first_name}} {{user_id}} </p>
-        <p>Book id:  {{book.id}}  Book title: {{book.title}} </p>
-        <p>
+       <a button class="btn" href="`/review/${book.id}`"
           <button class="btn btn-login">Submit</button>
         </p>
       </div>
     </div>
   </div>
-</div>
+</div> --}}
+
+<body>
+  <main>
+    <div class="profile">
+      <div class="container">
+
+        <h2>Reviews On This Book: </h2>
+
+        <div class="row" id="delete-card">
+          {{#each bookreviews as |bookreview|}}
+          <div class="col-md-4">
+            <div class="card">
+              <img src="./img/book.jpg" class="card-img-top" alt="book">
+              <div class="card-body">
+                <p class="card-text"> Book: <strong> {{book.title}}</strong></p>
+                <p class="card-text"> Reviewers Name : <strong> {{user.first_name}} {{user.last_name}}</strong></p>
+                <p class="card-text"> Reviewers Email : <strong> {{user.email}}</strong></p>
+                <p class="card-text"> Review: <strong> {{bookreview.review_text}}</strong></p>
+                  <p class="card-text"> Star Rating: <strong> {{bookreview.star_rating}}</strong></p>
+                   <p class="card-text"> Review Date: <strong> {{bookreview.review_date}}</strong></p>
+                {{!-- {{/each}}             --}}
+                <p> Book Id : {{book.id}} </p>
+                {{!-- <button class="btn" data-id="{{book.id}}">DELETE</button> --}}
+                <a button class="btn" href="`/review/${{book.id}}`"
+          <button class="btn btn-login">Add Your Own Review!</button>
+              </div>
+            </div>
+          </div>
+          {{/each}}
+        </div>
