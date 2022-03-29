@@ -3,21 +3,18 @@
     "title": "Dune",
     "author": "Frank Herbert",
     "genre": "Science Fiction",
-    "user_id":1,
-    "file_name": "dune.jpg"
+    "user_id":1
   },
   {
     "title": "The Girl With The Dragon Tattoo",
     "author": "Stieg Larsson",
     "genre": "Crime",
-    "user_id":2,
-    "file_name": "girlwithdragontattoo.jpg"
+    "user_id":2
   },
   {
     "title": "A Game of Thrones",
     "author": "George R. R. Martin",
     "genre": "Fantasy",
-    "user_id":3,
-    "file_name": "gameofthrones.jpg"
+    "user_id":3
   }
 ]

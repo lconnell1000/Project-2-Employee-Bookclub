@@ -1,0 +1,20 @@
+[
+    {
+      "review_text": "I thoroughly enjoyed Dune and think its the best sci-fi book in the world!",
+      "star_rating": "5",
+      "user_id": "1",
+      "book_id": "1"
+    },
+    {
+        "review_text": "The girl with the dragon tattoo is the first of 3 books in the millenium series by Stieg Larsson. It was this book that got me hooked on the trilogy and i love it!",
+        "star_rating": "5",
+        "user_id": "2",
+        "book_id": "2"
+      },
+      {
+        "review_text": "Game of thrones is a much better book than tv show. I would highly recommend anyone who has seen the tv show and were dissapointed to read the book!",
+        "star_rating": "4",
+        "user_id": "3",
+        "book_id": "3"
+      }
+  ]
