@@ -46,7 +46,7 @@ THEN I am logged out of the website
 
 ## Deployment on Heroku
 
-[Novel Shelf on Heroku](https://)
+[Novel Shelf on Heroku](https://novelspace.herokuapp.com/)
 
 ## Development
 
@@ -101,4 +101,4 @@ Unfortunatly, we had some major issues trying to get the uploads to work with th
 
 ## Deployment on Heroku
 
-[Novel Shelf on Heroku](https://)
+[Novel Shelf on Heroku](https://novelspace.herokuapp.com/)
