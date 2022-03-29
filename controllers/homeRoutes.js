@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Book, User } = require('../models');
+const { Book, User, BookReview } = require('../models');
 const withAuth = require('../utils/auth');
 const multer = require('multer');
 
@@ -29,27 +29,50 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/book/:id', async (req, res) => {
+
+router.get('/book/id', withAuth, async (req, res) => {
   try {
-    const bookData = await Book.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ['first_name', 'last_name'],
-        },
-      ],
+    // Find the book
+    const bookreviewData = await User.findByPk(id, {
+      include: [{ model: BookReview }],
     });
 
-    const book = bookData.get({ plain: true });
+    const bookreviews = bookreviewData.map((bookreview) => bookreview.get({ plain: true }));
 
     res.render('addreview', {
-      ...book,
-      logged_in: req.session.logged_in
+      ...bookreviews,
+      logged_in: true
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
+// router.get('/book/:id', async (req, res) => {
+//   try {
+//     const bookreviewData = await Bookreview.findAll({
+//       // include: [
+//       //   {
+//       //     model: User,
+//       //     attributes: ['first_name', 'email'],
+//       //   },
+//       //   {
+//       //     model: Book,
+//       //     attributes: ['user_id', 'review_text', 'star_rating', 'review_date']
+//       //   }
+//       // ],
+//     });
+
+//     const bookreviews = bookreviewData.map((bookreview) => bookreview.get({ plain: true }));
+
+//     res.render('addreview', {
+//       ...bookreviews,
+//       logged_in: req.session.logged_in
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 //code for multer image uploads
 
