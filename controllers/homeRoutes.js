@@ -52,7 +52,8 @@ router.get('/book/:id', withAuth, async (req, res) => {
     const bookreviews = bookreviewData.map((bookreview) => bookreview.get({ plain: true }));
     console.log("book reviews: ", (bookreviews));
     res.render('addreview', {
-      ...bookreviews,
+      bookreviews,
+      book: bookreviews && bookreviews.length ? bookreviews[0].book : {},
       logged_in: true
     });
   } catch (err) {
