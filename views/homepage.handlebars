@@ -57,11 +57,11 @@
     </div>-->
     <div class="profile">
       <div class="container">
-      
         <h2>Science Fiction</h2>
 
         <div class="row" id="delete-card">
           {{#each books as |book|}}
+
           <div class="col-md-4">
             <div class="card">
               <img src="./img/book.jpg" class="card-img-top" alt="book">
@@ -70,8 +70,8 @@
                 <h5 class="card-author">-- {{book.author}}</h5>
                 <p class="card-text"> genre = <strong> {{book.genre}}</strong></p>
                 <!--<p class="card-text"> file_name = <strong> {{book.file_name}}</strong></p>-->
-                <p class="card-text"> user_id = <strong> {{book.user_id}}</strong></p>
-                <p> id = {{book.id}} </p>
+                <p class="card-text"> owner = <strong> {{book.user_id}}</strong></p>
+                <!--<p> id = {{book.id}} </p>-->
                 <button class="btn" data-id="{{book.id}}">DELETE</button>
                 <span class="stars"><i class="fas fa-star"></i> <i class="fas fa-star"></i><i class="fas fa-star"></i><i
                 class="fas fa-star"></i></span>
@@ -80,6 +80,12 @@
           </div>
           {{/each}}
         </div>
+
+        <ul style="color:#fff;">
+          {{#each book}}
+            <li>{{this}}</li>
+          {{/each}}
+        </ul>
       
         <!--<div class="row" id="delete-card">
           {{#each books as |book|}}

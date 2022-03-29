@@ -130,6 +130,9 @@ li.nav-btn a {
   margin-left:auto;
   margin-right:auto;
 }
+.card h4,h5 {
+  padding-top:0px;
+}
 .btn {
   background-color: var(--orange);
   color: var(--white);
@@ -158,7 +161,7 @@ li.nav-btn a {
 .login-page {
   background-color:var(--wine);
   padding: 30px 60px 60px;
-  height: 100vh;
+  height: 100%;
 }
 /* style form inputs */
 .form-input {

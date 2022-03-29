@@ -23,6 +23,4 @@ const newFormHandler = async (event) => {
   };
   
   
-  document
-    .querySelector('.new-review-form')
-    .addEventListener('submit', newFormHandler);
+  document.querySelector('.new-review-form').addEventListener('submit', newFormHandler);
