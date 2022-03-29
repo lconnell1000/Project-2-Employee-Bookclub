@@ -1,63 +1,9 @@
-
-   
 <body>
   <main>
-    <!--<div class="profile">
-      <div class="container">
-
-        <h2>Science Fiction</h2>
-        <div class="row">
-
-          <div class="col-md-4">
-            <div class="card">
-              <img src="./img/book.jpg" class="card-img-top" alt="book">
-              <div class="card-body">
-                <h4 class="card-title">book title</h4>
-                <h5 class="card-author">-- Some Guy</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-home">Go somewhere</a>
-                <span class="stars"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i></span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card">
-              <img src="./img/book.jpg" class="card-img-top" alt="book">
-              <div class="card-body">
-                <h4 class="card-title">book title</h4>
-                <h5 class="card-author">-- Some Guy</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn">Go somewhere</a>
-                <span class="stars"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i></span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card">
-              <img src="./img/book.jpg" class="card-img-top" alt="book">
-              <div class="card-body">
-                <h4 class="card-title">book title</h4>
-                <h5 class="card-author">-- Some Guy</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn">Go somewhere</a>
-                <span class="stars"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>-->
     <div class="profile">
       <div class="container">
-        <h2>Science Fiction</h2>
+
+        <h2>BOOKS ON THE SHELF</h2>
 
         <div class="row" id="delete-card">
           {{#each books as |book|}}
@@ -74,19 +20,13 @@
                 <!--<p> id = {{book.id}} </p>-->
                 <button class="btn" data-id="{{book.id}}">DELETE</button>
                 <span class="stars"><i class="fas fa-star"></i> <i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                class="fas fa-star"></i></span>
+                    class="fas fa-star"></i></span>
               </div>
             </div>
           </div>
           {{/each}}
         </div>
 
-        <ul style="color:#fff;">
-          {{#each book}}
-            <li>{{this}}</li>
-          {{/each}}
-        </ul>
-      
         <!--<div class="row" id="delete-card">
           {{#each books as |book|}}
           <div class="col-md-4">
@@ -97,7 +37,7 @@
                 <h5 class="card-author">-- {{book.author}}</h5>
                 <p class="card-text"> genre = <strong> {{book.genre}}</strong></p>
                 <!--<p class="card-text"> file_name = <strong> {{book.file_name}}</strong></p>-->
-                <!--<p class="card-text"> user_id = <strong> {{book.user_id}}</strong></p>
+        <!--<p class="card-text"> user_id = <strong> {{book.user_id}}</strong></p>
                 <p> id = {{book.id}} </p>
                 <button class="btn" data-id="{{book.id}}">DELETE</button>
                 <span class="stars"><i class="fas fa-star"></i> <i class="fas fa-star"></i><i class="fas fa-star"></i><i
@@ -107,7 +47,7 @@
           </div>
           {{/each}}
         </div>-->
-      
+
       </div>
     </div>
     <!--<div class="books1">
