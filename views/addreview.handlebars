@@ -1,20 +1,20 @@
 <div class="profile">
   <div class="container">
-    <div class="row">
-       {{#each bookreviews as |bookreview|}}
-        <div class="col-md-4">
-          <div class="card">
-            <img src="./img/book.jpg" class="card-img-top" alt="book">
-            <div class="card-body">
-              <p class="card-text"> Review left by = {{bookreview.user_id}}</p>
-              <p class="card-text"> Review Text = {{bookreview.review_text}}</p>
-              <p class="card-text"> Star Rating = {{bookreview.star_rating}}</p>
-              <p class="card-test"> Review Date = {{bookreview.review_date}}</p>
-              <p class="card-test"> Book ID = {{bookreview.book_id}}</p>
-            </div>
-          </div>
-        </div>
-        {{/each}}
+    <div class="row justify-content-md-center">
+      <div class="col-md-auto">
+        <h3>Checkout the reviews</h3>
+
+
+        <p>
+          <a button class="btn btn-login" href="/profile">Return to your profile</a>
+        </p>
+        <h3>Add your review</h3>
+        <p>first name:  {{first_name}} {{user_id}} </p>
+        <p>Book id:  {{book.id}}  Book title: {{book.title}} </p>
+        <p>
+          <button class="btn btn-login">Submit</button>
+        </p>
+      </div>
     </div>
   </div>
 </div>

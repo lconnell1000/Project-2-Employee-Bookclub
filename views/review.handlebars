@@ -1,69 +1,37 @@
-
-   
-<div class="profile">
-  
+<div class="add-books">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-md-auto">
         <h3>Add a Review for this book:</h3>
-
         <form class="form new-review-form">
-            <div class="container">
-      <h2>Book ID: </h2><div id="id-get">{{id}}</div>
-
-        
-    <div class="row">
-      <div class="col">
-          <div class="form-group">
-            <label for="review-text">Your Thoughts About the Book:</label>
-            <textarea class="form-input" id="review-text" name="review-text"></textarea>
-          </div>
-          {{!-- <div class="form-group">
-            <label for="star-rating">Your Star Rating Out of 5:</label>
-            <textarea class="form-input" id="star-rating" name="star-rating"></textarea>
-          </div> --}}
-
-          <div class="form-group">
-            <label for="star-rating">Your Star Rating Out of 5:</label>
-            <select name="star-rating" id="star-rating">
-              <option value=1>1 Star</option>
-              <option value=2>2 Star</option>
-              <option value=3>3 Star</option>
-              <option value=4>4 Star</option>
-              <option value=5>5 Star</option>
-            </select>
-            <br><br>
-            <div class="form-group">
-              <button type="submit" class="btn btn-primary">Create Review</button>
-            </div>
-          </div>          
+          <div class="container">
+            <h6>Book ID: <span id="id-get">{{id}}</span>
+            </h6>
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="review-text">Your Thoughts About the Book:</label>
+                  <textarea class="form-input text-box" id="review-text" name="review-text"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="star-rating">Your Star Rating Out of 5:</label>
+                  <select name="star-rating" id="star-rating">
+                    <option value=1>1 Star</option>
+                    <option value=2>2 Star</option>
+                    <option value=3>3 Star</option>
+                    <option value=4>4 Star</option>
+                    <option value=5>5 Star</option>
+                  </select>
+                  <br><br>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Create Review</button>
+                  </div>
+                </div>
         </form>
       </div>
     </div>
   </div>
 </div>
-{{!-- <body>
-  <main>
-    <div class="books">
-      <div class="container">
-        <div class="row justify-content-md-center">
-          <div class="col-md-auto">
-            <h3>Add a Review for this book:</h3>
-            <form class="form new-review-form">
-              <div class="form-group">
-                <label for="review-text">Your Thoughts About the Book:</label>
-                <textarea class="form-input" id="review-text" name="review-text"></textarea>
-              </div>
-              <div class="form-group">
-                <label for="star-rating">Your Star Rating Out of 5:</label>
-                <textarea class="form-input" id="star-rating" name="star-rating"></textarea>
-              </div>
-              <div class="form-group">
-                <button type="submit" class="btn btn-primary">Create Review</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-</body> --}}
+
 
 <script src="/js/review.js"></script>

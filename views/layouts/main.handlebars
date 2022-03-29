@@ -46,9 +46,12 @@
               <li class="nav-item">
                 <a class="nav-link" href="/profile">Profile</a>
               </li>
-              <li class="btn-login">
-                <a href="/login">Login</a>
-              </li>
+              <li class="nav-btn">
+                {{#if logged_in}}
+                  <a class="btn-login" id="logout">logout</a>
+                {{else}}
+                  <a class="btn-login" href="/login">login</a>
+                {{/if}}
             </ul>
           </div>
         </nav>
@@ -63,17 +66,10 @@
 {{{ body }}}
 
 <footer>
-
+  
 </footer>
 </div>
 
-<!-- Render script for logged in users only -->
-{{#if logged_in}}
-<li class="btn-logout">
-                logout
-              </li>
-<script src="/js/logout.js"></script>
-{{/if}}
-</body>
 
 </html>
+<script src="/js/logout.js"></script>
