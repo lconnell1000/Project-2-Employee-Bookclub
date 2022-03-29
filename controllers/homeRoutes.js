@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
 
     // Serialize data so the template can read it
     const books = bookData.map((book) => book.get({ plain: true }));
-
+   //console.log("home", books);
     // Pass serialized data and session flag into template
     res.render('homepage', {
       books,
@@ -30,15 +30,27 @@ router.get('/', async (req, res) => {
 });
 
 
-router.get('/book/id', withAuth, async (req, res) => {
+router.get('/book/:id', withAuth, async (req, res) => {
+  //get all book reviews and join with book data
+  // try {
+  //   // Find the book
+  //   console.log("TEST");
+  //   const bookreviewData = await Bookreview.findAll({
+  //     include: [{ model: Book, User}],
+  //   });
   try {
-    // Find the book
-    const bookreviewData = await User.findByPk(id, {
-      include: [{ model: BookReview }],
+    // Get all books and JOIN with user data
+    //Note.findAll({ where: { id: req.params.id } }).then(notes => res.json(notes));
+    const bookreviewData = await BookReview.findAll({
+      where: {id: req.params.id},
+      include: [
+        {
+          model: User, Book
+        },
+      ],
     });
-
     const bookreviews = bookreviewData.map((bookreview) => bookreview.get({ plain: true }));
-
+    console.log("book reviews: ", (bookreviews));
     res.render('addreview', {
       ...bookreviews,
       logged_in: true
