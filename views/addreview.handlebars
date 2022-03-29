@@ -44,9 +44,9 @@
                   <p class="card-text"> Star Rating: <strong> {{bookreview.star_rating}}</strong></p>
                    <p class="card-text"> Review Date: <strong> {{bookreview.review_date}}</strong></p>
                 {{!-- {{/each}}             --}}
-                <p> Book Id : {{book.id}} </p>
+                <p> Book Id : {{bookreview.book_id}} </p>
                 {{!-- <button class="btn" data-id="{{book.id}}">DELETE</button> --}}
-                <a button class="btn" href="`/review/${{book.id}}`"
+                <a button class="btn" href="`/review/${{bookreview.book_id}}`"
           <button class="btn btn-login">Add Your Own Review!</button>
               </div>
             </div>
