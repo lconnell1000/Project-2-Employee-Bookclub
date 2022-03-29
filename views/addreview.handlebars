@@ -2,12 +2,12 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <h2>Welcomex, {{user.first_name}}!</h2>
+        <h2>Welcome To Reviews of: {{book.title}}</h2>
       </div>
     </div>
     
       <div class="col-sm-4">
-        <a class="btn btn-login" href="`/review/${{book_id}}`">Add your own review!</a>
+        <a class="btn btn-login" href="/review/{{book.id}}">Add your own review!</a>
       </div>
    
     <div class="books">
@@ -27,9 +27,7 @@
                    <p class="card-text"> Review Date: <strong> {{bookreview.review_date}}</strong></p>
                 {{!-- {{/each}}             --}}
                 <p> Book Id : {{bookreview.book_id}} </p>
-                {{!-- <button class="btn" data-id="{{book.id}}">DELETE</button> --}}
-                {{!-- <a button class="btn" href=
-          <button class="btn btn-login">Add Your Own Review!</button> --}}
+              
               </div>
             </div>
           </div>

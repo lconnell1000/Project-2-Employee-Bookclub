@@ -53,6 +53,7 @@ router.get('/book/:id', withAuth, async (req, res) => {
     console.log("book reviews: ", (bookreviews));
     res.render('addreview', {
       bookreviews,
+      book: bookreviews && bookreviews.length ? bookreviews[0].book : {},
       logged_in: true
     });
   } catch (err) {
